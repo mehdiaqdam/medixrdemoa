@@ -2,3 +2,4 @@
 
 export(drop_trailing_zero)
 import(stringr)
+importFrom(lifecycle,deprecated)
