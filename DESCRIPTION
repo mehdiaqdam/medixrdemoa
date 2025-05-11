@@ -10,3 +10,5 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 URL: https://github.com/mehdiaqdam/medixrdemoa
 BugReports: https://github.com/mehdiaqdam/medixrdemoa/issues
+Imports: 
+    stringr (>= 1.5.1)

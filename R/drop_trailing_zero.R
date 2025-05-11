@@ -1,0 +1,25 @@
+#' @title Drop Trailing Zero
+#'
+#' @description
+#' Drops trailing zero(s) with no mathematical value.
+#'
+#' @param x a numeric value or vector.
+#'
+#' @return a character (single or vector depending on \code{x}).
+#'
+#' @export
+#'
+#' @import stringr
+#'
+#' @examples
+#' x <- 0.00200
+#' drop_trailing_zero(x)
+#'
+#' x <- c(0.00200, 0.1, 1110.0250)
+#' drop_trailing_zero(x)
+drop_trailing_zero <- function(x) {
+  x_f = format(x, scientific = FALSE)
+  ifelse(str_detect(x_f, "\\."),
+         str_replace(x_f, "[\\.]?[0]+$", ""),
+         x_f)
+}
