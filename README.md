@@ -1,10 +1,9 @@
 
-# medixrdemoa
+# medixrdemoa <img src="man/figures/logo.png" align="right" height="139" alt="" />
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-# medixrdemoa <img src="man/figures/logo.png" align="right" height="139" alt="" />
 ## Installation
 
 Install `medixrdemoa` using:
