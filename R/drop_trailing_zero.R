@@ -15,10 +15,11 @@
 #'
 #' @examples
 #' x <- 0.00200
-#' drop_trailing_zero(x)
+#' drop_trailing_zero(x, aligh = "left")
+#' drop_trailing_zero(x, aligh = "right")
 #'
 #' x <- c(0.00200, 0.1, 1110.0250)
-#' drop_trailing_zero(x)
+#' drop_trailing_zero(x, aligh = "left")
 drop_trailing_zero <- function(x, align) {
 
   if (is.null(align) || !align %in% c("left", "right")) {
@@ -33,10 +34,6 @@ drop_trailing_zero <- function(x, align) {
   x_res <- ifelse(str_detect(x_res, "\\."),
                   str_replace(x_res, "[\\.]?[0]+$", ""),
                   x_res)
-  #
-  # if (str_detect(x_res, "\\.")) {
-  #   x_res <- str_replace(x_res, "[\\.]?[0]+$", "")
-  # }
 
   if (align == "left") {
     x_res <- str_trim(x_res)

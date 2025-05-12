@@ -22,7 +22,6 @@ test_that("NA or NaN", {
                c("NA", "1", "1.01", "NaN", "NA"))
 })
 
-
 test_that("input is numeric", {
   x <- "2"
   expect_error(drop_trailing_zero(x, align = "left"),
@@ -30,7 +29,6 @@ test_that("input is numeric", {
   x <- c("2", "ab", NA_character_)
   expect_error(drop_trailing_zero(x, align = "left"),
                "Input must be a number or a numeric vector.")
-
 })
 
 test_that("aligns", {
@@ -39,5 +37,4 @@ test_that("aligns", {
                c("0.12", "1.02", "10.1000203", "300.3"))
   expect_equal(drop_trailing_zero(x, align = "right"),
                c("  0.12", "  1.02", " 10.1000203", "300.3"))
-
 })
