@@ -4,10 +4,12 @@
 \alias{drop_trailing_zero}
 \title{Drop Trailing Zero}
 \usage{
-drop_trailing_zero(x)
+drop_trailing_zero(x, align)
 }
 \arguments{
 \item{x}{a numeric value or vector.}
+
+\item{align}{alignment ('left' or 'right') of returned values.}
 }
 \value{
 a character (single or vector depending on \code{x}).

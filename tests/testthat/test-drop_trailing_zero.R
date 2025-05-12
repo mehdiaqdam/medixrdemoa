@@ -17,7 +17,7 @@ test_that("integer", {
 })
 
 test_that("NA or NaN", {
-  x <- c(NA, 1, 1.01, NaN, NA_real_,)
+  x <- c(NA, 1, 1.01, NaN, NA_real_)
   expect_equal(drop_trailing_zero(x, align = "left"),
                c("NA", "1", "1.01", "NaN", "NA"))
 })
