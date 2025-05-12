@@ -20,10 +20,9 @@
 #' drop_trailing_zero(x)
 drop_trailing_zero <- function(x) {
 
-  # if (!is.numeric(x)) {
-  #   cli_abort("input is not numeric")
-  #
-  # }
+  if (!is.numeric(x)) {
+    cli_abort("Input must be a number a numeric vector.")
+  }
 
   x_f = format(x, scientific = FALSE)
   ifelse(str_detect(x_f, "\\."),
