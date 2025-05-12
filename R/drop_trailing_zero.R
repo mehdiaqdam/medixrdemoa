@@ -10,6 +10,7 @@
 #' @export
 #'
 #' @import stringr
+#' @import cli
 #'
 #' @examples
 #' x <- 0.00200
@@ -18,6 +19,12 @@
 #' x <- c(0.00200, 0.1, 1110.0250)
 #' drop_trailing_zero(x)
 drop_trailing_zero <- function(x) {
+
+  # if (!is.numeric(x)) {
+  #   cli_abort("input is not numeric")
+  #
+  # }
+
   x_f = format(x, scientific = FALSE)
   ifelse(str_detect(x_f, "\\."),
          str_replace(x_f, "[\\.]?[0]+$", ""),
