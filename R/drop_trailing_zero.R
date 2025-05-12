@@ -15,11 +15,11 @@
 #'
 #' @examples
 #' x <- 0.00200
-#' drop_trailing_zero(x, aligh = "left")
-#' drop_trailing_zero(x, aligh = "right")
+#' drop_trailing_zero(x, align = "left")
+#' drop_trailing_zero(x, align = "right")
 #'
 #' x <- c(0.00200, 0.1, 1110.0250)
-#' drop_trailing_zero(x, aligh = "left")
+#' drop_trailing_zero(x, align = "left")
 drop_trailing_zero <- function(x, align) {
 
   if (is.null(align) || !align %in% c("left", "right")) {
